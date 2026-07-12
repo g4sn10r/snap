@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snap</title>
+<meta name="description" content="Snap to panel CEP do After Effects, który zamienia dwanaście najczęstszych czynności montażowych w jedno kliknięcie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="logo" href="#top">
+        <span class="logo__text">Snap</span>
+      </a>
+      <nav class="nav">
+        <a href="#funkcje">Funkcje</a>
+        <a href="#instalacja">Instalacja</a>
+        <a href="#pobierz" class="nav__cta">Pobierz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero wrap">
+      <div class="hero__copy">
+        <p class="eyebrow">Rozszerzenie do Adobe After Effects</p>
+        <h1 class="hero__title">Wszystko<br>w jednym miejscu.</h1>
+        <p class="hero__lead">
+          Snap to wtyczka przyspieszająca twoją pracę. Po co uczyć się masy skrótów klawiszowych, kiedy masz wszystko w jednym panelu? Nic prostszego. Dzięki Snap jesteś w stanie przyspieszyć swoją prace pięciokrotnie, bez tracenia czasu na "a jaki był od tego skrót?".
+        </p>
+        <div class="hero__actions">
+          <a href="snap.zip" class="btn btn--primary" download>
+            Pobierz Snap
+            <span class="btn__meta">.zip</span>
+          </a>
+          <a href="#instalacja" class="btn btn--ghost">Instrukcja</a>
+        </div>
+        <p class="hero__note">macOS · Windows</p>
+      </div>
+
+      <div class="hero__demo" aria-hidden="true">
+        <div class="panel-mock">
+          <div class="panel-mock__header">
+            <span class="panel-mock__title">SNAP</span>
+            <span class="panel-mock__dot"></span>
+          </div>
+          <div class="panel-mock__grid" id="demoGrid">
+            <!-- wypełniane przez js/script.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="funkcje" class="features wrap">
+      <p class="section-label">Co robi</p>
+      <h2 class="section-title">Nie marnuj juz czasu</h2>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Wstaw</h3>
+          <p>Tekst, solid czy kształt —
+          Klikasz i masz, zero skrótów klawiszowych, wszystko od ręki.</p>
+          <ul class="feature-tags">
+            <li>text</li><li>solid</li><li>light</li><li>shape</li><li>camera</li><li>null</li><li>adj</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h3>Split</h3>
+          <p>Po co pamiętać którym skrótem się cięło? I po co ręcznie ustawiać długość klipu, kiedy jeden przycisk, i zrobione.</p>
+          <ul class="feature-tags">
+            <li>split</li><li>in</li><li>out</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h3>Precomp i Duplikuj</h3>
+          <p>Stworzysz nową kompozycje bez menu kontekstowego, a opcja duplikacji pominie twoją naukę skrótów klawiszowych. Zorganizuj swoja praće w jednym kliknięciu.</p>
+          <ul class="feature-tags">
+            <li>dup</li><li>comp</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="instalacja" class="install wrap">
+      <p class="section-label">Instalacja</p>
+      <h2 class="section-title">Zainstaluj w pięciu krokach.</h2>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step__num">1</span>
+          <div class="step__body">
+            <h3>Pobierz i rozpakuj</h3>
+            <p>Pobierz plik <code>snap.zip</code> i rozpakuj go.</p>
+          </div>
+        </li>
+
+        <li class="step">
+          <span class="step__num">2</span>
+          <div class="step__body">
+            <h3>Przenieś do folderu:</h3>
+            <p>macOS: <code>~/Library/Application Support/Adobe/CEP/extensions/</code></p>
+            <p>Windows: <code>%APPDATA%\Adobe\CEP\extensions\</code></p>
+          </div>
+        </li>
+
+        <li class="step">
+          <span class="step__num">3</span>
+          <div class="step__body">
+            <h3>Włącz tryb debugowania</h3>
+            <p>W Terminalu (macOS):</p>
+            <div class="code-block">
+              <code id="debugCmd">defaults write com.adobe.CSXS.12 PlayerDebugMode 1</code>
+              <button class="copy-btn" data-copy-target="debugCmd" type="button">Kopiuj</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="step">
+          <span class="step__num">4</span>
+          <div class="step__body">
+            <h3>Uruchom After Effects</h3>
+            <p>Snap powinien się pojawić w zakładce rozszerzeń.</p>
+          </div>
+        </li>
+
+        <li class="step">
+          <span class="step__num">5</span>
+          <div class="step__body">
+            <h3>Otwórz panel</h3>
+            <p><strong>Window → Extensions (Legacy) → Snap</strong></p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="pobierz" class="cta wrap">
+      <div class="cta__card">
+        <h2>Zachęciłem?</h2>
+        <p>Pobierz i przyspiesz swoje workflow razem ze Snap</p>
+        <a href="snap.zip" class="btn btn--primary btn--lg" download>
+          Pobierz Snap
+          <span class="btn__meta">.zip · CEP</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p>Snap jest darmowy. Jeśli ktokolwiek chce od ciebie za niego pieniądze, skontaktuj się z twórcą.</p>
+      <p class="site-footer__meta">v1.0</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
