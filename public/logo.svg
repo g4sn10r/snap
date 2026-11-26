@@ -1,0 +1,15 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b58cff"/>
+      <stop offset="100%" stop-color="#7c5cff"/>
+    </linearGradient>
+  </defs>
+  <!-- Sparkle/star shape - 8 pointed with recessed inner star -->
+  <!-- Outer star (4 long + 4 short points = sparkle) -->
+  <path d="M24 2 L27 14 L39 16 L29 24 L32 36 L24 30 L16 36 L19 24 L9 16 L21 14 Z" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Inner recessed star (creates the "wklęsła" effect) -->
+  <path d="M24 8 L26 16 L33 18 L27 23 L29 31 L24 26 L19 31 L21 23 L15 18 L22 16 Z" stroke="url(#logoGrad)" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Vertical cut line through center -->
+  <path d="M24 2 L24 46" stroke="url(#logoGrad)" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+</svg>
